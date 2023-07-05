@@ -6,5 +6,8 @@
 Brain-even tutorial:
 https://asciinema.org/a/Ha6UJL5I0vVPA6OocN3AlO0rJ
 
-Braun-calc tutorial:
+Brain-calc tutorial:
 https://asciinema.org/a/1lKwmMUkiF7FkVkQN4QX85qEJ
+
+Brain-gcd tutorial:
+https://asciinema.org/a/OSy8WimoLbD0wn1jJqcVS7cII
