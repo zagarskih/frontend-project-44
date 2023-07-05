@@ -3,4 +3,8 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3ea895dd1061844c597c/test_coverage)](https://codeclimate.com/github/zagarskih/frontend-project-44/test_coverage)
 
+Brain-even tutorial:
 https://asciinema.org/a/Ha6UJL5I0vVPA6OocN3AlO0rJ
+
+Braun-calc tutorial:
+https://asciinema.org/a/1lKwmMUkiF7FkVkQN4QX85qEJ
