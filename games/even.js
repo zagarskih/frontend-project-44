@@ -1,30 +1,14 @@
-import getUserName, { getRandomNumber, getAnswer } from '../src/index.js';
+import startGame, { getRandomNumber } from '../src/index.js';
 
-const playGame = () => {
-  const userName = getUserName();
+const task = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
+const getGameData = () => {
   const max = 100;
-  let i = 0;
-
-  while (i < 3) {
-    const questionNumber = getRandomNumber(max);
-    const correctAnswer = questionNumber % 2 === 0 ? 'yes' : 'no';
-
-    console.log(`Question: ${questionNumber}`);
-    const answer = getAnswer();
-
-    if (correctAnswer === answer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-    i += 1;
-    if (i === 3) console.log(`Congratulations, ${userName}!`);
-  }
+  const question = getRandomNumber(max);
+  const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
-export default playGame;
+const startEvenGame = () => startGame(task, getGameData);
+
+export default startEvenGame;
