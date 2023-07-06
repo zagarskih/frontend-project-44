@@ -27,7 +27,7 @@ const playGame = () => {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      i = 3;
+      break;
     }
     i += 1;
     if (i === 3) console.log(`Congratulations, ${userName}!`);
