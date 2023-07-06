@@ -1,37 +1,22 @@
-import getUserName, { getRandomNumber, getAnswer } from '../src/index.js';
+import startGame, { getRandomNumber } from '../src/index.js';
 
-const playGame = () => {
-  const userName = getUserName();
+const task = 'Find the greatest common divisor of given numbers.';
 
-  console.log('Find the greatest common divisor of given numbers.');
-
+const getGameData = () => {
   const max = 50;
-  let i = 0;
-
-  while (i < 3) {
-    const firstNumber = getRandomNumber(max);
-    const secondNumber = getRandomNumber(max);
-    let correctAnswer = 1;
-
-    console.log(`Question: ${firstNumber} ${secondNumber}`);
-    const answer = Number(getAnswer());
-
-    for (let num = 1; num <= firstNumber; num += 1) {
-      if (firstNumber % num === 0 && secondNumber % num === 0) {
-        correctAnswer = num > correctAnswer ? num : correctAnswer;
-      }
+  const min = 2;
+  const firstNumber = getRandomNumber(max, min);
+  const secondNumber = getRandomNumber(max, min);
+  const question = `${firstNumber} ${secondNumber}`;
+  let rightAnswer = 1;
+  for (let num = 1; num <= firstNumber; num += 1) {
+    if (firstNumber % num === 0 && secondNumber % num === 0) {
+      rightAnswer = num > rightAnswer ? num : rightAnswer;
     }
-
-    if (correctAnswer === answer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-    i += 1;
-    if (i === 3) console.log(`Congratulations, ${userName}!`);
   }
+  return [question, rightAnswer];
 };
 
-export default playGame;
+const startGcdGame = () => startGame(task, getGameData);
+
+export default startGcdGame;
