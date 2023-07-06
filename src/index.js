@@ -7,7 +7,7 @@ const getUserName = () => {
   return userName;
 };
 
-const getRandomNumber = (max) => Math.floor(Math.random() * max);
+const getRandomNumber = (max, min = 0) => Math.floor(min + Math.random() * (max + 1 - min));
 
 const getAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
