@@ -61,7 +61,7 @@ $ brain-prime
 
 ---
 ### Brain-progression usage and demo <a name="brain-progression"></a>
-Definition of a prime number.
+Progression. Search for missing numbers in a sequence of numbers.
 
 ```
 $ brain-progression
