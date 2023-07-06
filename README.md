@@ -3,6 +3,8 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3ea895dd1061844c597c/test_coverage)](https://codeclimate.com/github/zagarskih/frontend-project-44/test_coverage)
 
+<a href="https://asciinema.org/a/ivfhJwUZnYlVzC8bQiZvA2vDZ" target="_blank"><img src="https://asciinema.org/a/ivfhJwUZnYlVzC8bQiZvA2vDZ.svg" />Brain-even game</a>
+
 Brain-even tutorial:
 https://asciinema.org/a/Ha6UJL5I0vVPA6OocN3AlO0rJ
 
