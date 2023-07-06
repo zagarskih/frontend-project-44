@@ -5,11 +5,10 @@
 
 <a href="https://asciinema.org/a/ivfhJwUZnYlVzC8bQiZvA2vDZ" target="_blank">Brain-even game</a>
 
-Brain-even tutorial:
-https://asciinema.org/a/Ha6UJL5I0vVPA6OocN3AlO0rJ
+<a href="https://asciinema.org/a/9PtsEuvk5rYqJO5xg1UefloV1" target="_blank">Brain-calc game</a>
 
-Brain-calc tutorial:
-https://asciinema.org/a/1lKwmMUkiF7FkVkQN4QX85qEJ
+<a href="https://asciinema.org/a/IyQ1jUvkZt41UtdPHsTBYGtow" target="_blank">Brain-gcd game</a>
 
-Brain-gcd tutorial:
-https://asciinema.org/a/OSy8WimoLbD0wn1jJqcVS7cII
+<a href="https://asciinema.org/a/i04HGFmyVlYG8VMlCvM8QG48F" target="_blank">Brain-prime game</a>
+
+<a href="https://asciinema.org/a/MtwZxjdRuJ8focZV0QOwNAnsb" target="_blank">Brain-progression game</a>
