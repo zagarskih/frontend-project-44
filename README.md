@@ -12,9 +12,8 @@ Brain Games – is a set of five console games based on popular mobile brain tra
 * [Brain-even](#brain-even)
 * [Brain-calc](#brain-calc)
 * [Brain-gcd](#brain-gcd)
-* [Brain-progression](#brain-progression)
 * [Brain-prime](#brain-prime)
-
+* [Brain-progression](#brain-progression)
 ---
 
 ### Installation
