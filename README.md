@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/zagarskih/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/zagarskih/frontend-project-44/actions)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/3ea895dd1061844c597c/test_coverage)](https://codeclimate.com/github/zagarskih/frontend-project-44/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3ea895dd1061844c597c/maintainability)](https://codeclimate.com/github/zagarskih/frontend-project-44/maintainability)
 
 <a href="https://asciinema.org/a/ivfhJwUZnYlVzC8bQiZvA2vDZ" target="_blank">Brain-even game</a>
 
