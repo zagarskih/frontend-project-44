@@ -1,43 +1,29 @@
-import getUserName, { getRandomNumber, getAnswer } from '../src/index.js';
+import startGame, { getRandomNumber } from '../src/index.js';
 
-const playGame = () => {
-  const userName = getUserName();
+const task = 'What is the result of the expression?';
 
-  console.log('What is the result of the expression?');
-
+const getGameData = () => {
   const max = 20;
+  const min = 2;
   const allOperators = '+-*';
+  const firstNumber = getRandomNumber(max, min);
+  const secondNumber = getRandomNumber(max, min);
+  const index = getRandomNumber(allOperators.length - 1);
+  const operator = allOperators[index];
+  let rightAnswer = 0;
 
-  let i = 0;
-
-  while (i < 3) {
-    const firstNumber = getRandomNumber(max);
-    const secondNumber = getRandomNumber(max);
-    const index = getRandomNumber(allOperators.length);
-    const operator = allOperators[index];
-    let correctAnswer = 0;
-
-    if (operator === '+') {
-      correctAnswer += firstNumber + secondNumber;
-    } else if (operator === '-') {
-      correctAnswer += firstNumber - secondNumber;
-    } else {
-      correctAnswer += firstNumber * secondNumber;
-    }
-
-    console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
-    const answer = Number(getAnswer());
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-    i += 1;
-    if (i === 3) console.log(`Congratulations, ${userName}!`);
+  if (operator === '+') {
+    rightAnswer += firstNumber + secondNumber;
+  } else if (operator === '-') {
+    rightAnswer += firstNumber - secondNumber;
+  } else if (operator === '*') {
+    rightAnswer += firstNumber * secondNumber;
   }
+  const question = `${String(firstNumber)} ${operator} ${String(secondNumber)}`;
+
+  return [question, rightAnswer];
 };
 
-export default playGame;
+const startCalcGame = () => startGame(task, getGameData);
+
+export default startCalcGame;
