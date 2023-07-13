@@ -13,11 +13,11 @@ const getGameData = () => {
   const firstNumber = getRandomNumber(maxFirstNumber);
   const indexOfEmpty = getRandomNumber(numsCount);
 
-  const getProgression = () => {
+  const getProgression = (start, progressionStep, progressionLength) => {
     const arrOfNums = [];
-    let elemOfProgression = firstNumber;
-    for (let i = 0; i < numsCount; i += 1) {
-      elemOfProgression += step;
+    let elemOfProgression = start;
+    for (let i = 0; i < progressionLength; i += 1) {
+      elemOfProgression += progressionStep;
       arrOfNums.push(elemOfProgression);
     }
     return arrOfNums;
