@@ -9,16 +9,20 @@ const getGameData = () => {
   const firstNumber = getRandomNumber(max, min);
   const secondNumber = getRandomNumber(max, min);
   const question = `${firstNumber} ${secondNumber}`;
-  let rightAnswer = 1;
-  for (let num = 1; num <= firstNumber; num += 1) {
-    if (firstNumber % num === 0 && secondNumber % num === 0) {
-      rightAnswer = num > rightAnswer ? num : rightAnswer;
+
+  const getGcd = (num1, num2) => {
+    let gcd = 1;
+    for (let i = 1; i <= num1; i += 1) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        gcd = i > gcd ? i : gcd;
+      }
     }
-  }
+    return gcd;
+  };
 
-  const checkAnswer = (a) => a === String(rightAnswer);
+  const rightAnswer = getGcd(firstNumber, secondNumber);
 
-  return [question, checkAnswer, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const startGcdGame = () => startGame(task, getGameData);

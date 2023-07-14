@@ -24,13 +24,12 @@ const getGameData = () => {
   };
 
   const progression = getProgression(firstNumber, step, numsCount);
-  const rightAnswer = progression[indexOfEmpty];
+  const takenElem = progression[indexOfEmpty];
   progression[indexOfEmpty] = '..';
+  const rightAnswer = takenElem;
   const question = `${progression.join(' ')}`;
 
-  const checkAnswer = (a) => a === String(rightAnswer);
-
-  return [question, checkAnswer, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const startProgressionGame = () => startGame(task, getGameData);

@@ -9,20 +9,17 @@ const getGameData = () => {
   const questionNumber = getRandomNumber(max, min);
   const question = questionNumber;
 
-  const getRightAnswer = () => {
-    for (let i = 2; i < questionNumber; i += 1) {
-      if (questionNumber % i === 0) {
-        return 'no';
+  const isPrime = (number) => {
+    for (let i = 2; i < number; i += 1) {
+      if (number % i === 0) {
+        return false;
       }
     }
-    return 'yes';
+    return true;
   };
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
 
-  const rightAnswer = getRightAnswer();
-
-  const checkAnswer = (a) => a === rightAnswer;
-
-  return [question, checkAnswer, rightAnswer];
+  return [question, rightAnswer];
 };
 
 const startPrimeGame = () => startGame(task, getGameData);

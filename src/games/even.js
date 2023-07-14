@@ -7,18 +7,10 @@ const getGameData = () => {
   const max = 100;
   const question = getRandomNumber(max);
 
-  const getRightAnswer = () => {
-    if (question % 2 === 0) {
-      return 'yes';
-    }
-    return 'no';
-  };
+  const isEven = (number) => number % 2 === 0;
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
 
-  const rightAnswer = getRightAnswer();
-
-  const checkAnswer = (a) => a === rightAnswer;
-
-  return [question, checkAnswer, rightAnswer];
+  return [question, rightAnswer];
 };
 
 const startEvenGame = () => startGame(task, getGameData);
