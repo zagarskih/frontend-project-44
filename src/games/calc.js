@@ -12,26 +12,24 @@ const getGameData = () => {
   const index = getRandomNumber(allOperators.length - 1);
   const operator = allOperators[index];
 
-  const getRightAnswer = () => {
-    switch (operator) {
+  const getAnswer = (num1, num2, symbol) => {
+    switch (symbol) {
       case '+':
-        return firstNumber + secondNumber;
+        return num1 + num2;
       case '-':
-        return firstNumber - secondNumber;
+        return num1 - num2;
       case '*':
-        return firstNumber * secondNumber;
+        return num1 * num2;
       default:
-        throw new Error('Wrong operator');
+        throw new Error(`Wrong operator ${symbol}`);
     }
   };
 
-  const rightAnswer = getRightAnswer();
+  const rightAnswer = getAnswer(firstNumber, secondNumber, operator);
 
-  const question = `${String(firstNumber)} ${operator} ${String(secondNumber)}`;
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
 
-  const checkAnswer = (a) => a === String(rightAnswer);
-
-  return [question, checkAnswer, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const startCalcGame = () => startGame(task, getGameData);
