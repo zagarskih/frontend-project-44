@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "A set of five console games based on popular mobile brain training apps. [![Actions Status](https://github.com/zagarskih/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/zagarskih/frontend-project-44/actions)",
+  "description": "A set of five console games based on popular mobile brain training apps.",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
